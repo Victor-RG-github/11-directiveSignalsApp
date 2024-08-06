@@ -1,1 +1,12 @@
-<p>counter-page works!</p>
+<h1>Counter: {{counter()}}</h1>
+<hr>
+<h2>Square Counter: {{square()}}</h2>
+<hr>
+
+<div class="row mt-2">
+  <div class="col">
+    <button class="btn btn-primary me-1" (click)="updateCounter(+1)">+1</button>
+    <button class="btn btn-primary me-1" (click)="updateCounter(-1)">-1</button>
+    <button class="btn btn-primary" (click)="counter.set(0)">Reset</button>
+  </div>
+</div>
