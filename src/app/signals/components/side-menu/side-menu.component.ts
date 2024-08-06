@@ -20,6 +20,6 @@ export class SideMenuComponent {
   menuItems = signal<MenuItem[]>([
     { title: 'Counter', path: 'counter' },
     { title: 'User Info', path: 'user-info' },
-    { title: 'Properties', path: 'properties' },
+    { title: 'Mutables', path: 'properties' },
   ]);
 }

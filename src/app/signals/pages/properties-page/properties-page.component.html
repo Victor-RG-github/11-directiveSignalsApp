@@ -1,1 +1,22 @@
-<p>properties-page works!</p>
+<h1>Mutables</h1>
+<hr>
+<div class="row">
+  <div class="col-6">
+
+    <input type="text" class="form-control mb-2" #txtEmail (input)="updateField('email', txtEmail.value)" [value]="user().data.email">
+    <input type="text" class="form-control mb-2" #txtFirstName (input)="updateField('first_name', txtFirstName.value)"[value]="user().data.first_name">
+    <input type="text" class="form-control mb-2" #txtLastName (input)="updateField('last_name', txtLastName.value)"[value]="user().data.last_name">
+
+  </div>
+  <div class="col-6">
+    <pre>{{user() | json}}</pre>
+
+    {{userName()}}
+  </div>
+</div>
+<div class="row">
+  <div class="col mb-2">
+    <button (click)="increaseBy(-1)" class="btn btn-primary me-2">-1</button>
+    <button (click)="increaseBy(1)" class="btn btn-primary me-2">+1</button>
+  </div>
+</div>
